@@ -1,16 +1,17 @@
-export default {
-  title: "dark",
+import { useState, useEffect } from "react";
 
-  colors: {
-    primary: "#bf1a2f",
-    secondary: "#EC6E4C",
+type Response<T> = [T, (newState: T) => void];
 
-    primaryBackground: "#2c2926",
-    secondaryBackground: "#211f1c",
+function usePersistedState<T>(key: string, initialState: T): Response<T> {
+  const [state, setState] = useState(() => {
+    const storageValue = localStorage.getItem(key);
+    return storageValue ? JSON.parse(storageValue) : initialState;
+  });
 
-    primaryText: "#F5F5F5",
-    secondaryText: "#06bcc1",
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(state));
+  }, [key, state]);
 
-    link: "#96A7F2",
-  },
-};
+  return [state, setState];
+}
+export default usePersistedState;
