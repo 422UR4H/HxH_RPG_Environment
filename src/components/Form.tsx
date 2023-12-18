@@ -1,5 +1,6 @@
 "use client";
 
+import useUser from "@/hooks/useUser";
 import {
   DetailedHTMLProps,
   FormHTMLAttributes,
@@ -20,6 +21,11 @@ type FormProps = PropsWithChildren<
 
 export function Form(props: FormProps) {
   const [state, formAction] = useFormState(props.action, { error: null });
+
+  const userProvider = useUser();
+  if (!state?.error) {
+    userProvider?.login(state);
+  }
   return (
     <form
       {...props}
