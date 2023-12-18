@@ -1,3 +1,5 @@
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/422UR4H/HxH_RPG_Environment/blob/main/README.pt-br.md)
+
 # HxH RPG Environment
 
 A Front-end web application for rpg and Hunter X Hunter lovers to play a real HxH RPG System.
