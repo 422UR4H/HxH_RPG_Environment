@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 
 type Response<T> = [T, (newState: T) => void];
