@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# HxH RPG Environment
 
-## Getting Started
+A Front-end web application for rpg and Hunter X Hunter lovers to play a real HxH RPG System.
 
-First, run the development server:
+## Description
+
+This is the beginning of an ever-expanding Web Site created to foster a Hunter X Hunter RPG community. Utilizes the JavaScript/TypeScript ecosystem in React.js with Next.js + Tailwind CSS, ESLint and Prettier for code patterns.
+
+## Demo
+
+### Deploy Front-end Link: https://hxh-rpg-environment.vercel.app/
+Note: the demo is under construction and still requires direct access to the URL
+
+(see folder structure to navigate between pages)
+
+<br />
+
+## Quick start
+
+Clone this repository following the list of commands to install the dependencies.
+
+```bash
+git clone https://github.com/422UR4H/HxH_RPG_Environment
+cd HxH_RPG_Environment
+npm install
+```
+
+Create a .env file following the .env.example to connect to APIs.
+
+```bash
+# If the server is running locally
+NEXT_PUBLIC_API_URL="http://localhost:3001"
+NEXTAUTH_URL="http://localhost:3001"
+# OR
+NEXT_PUBLIC_API_URL="https://hxh-rpg-environment-api.onrender.com"
+NEXTAUTH_URL="https://hxh-rpg-environment-api.onrender.com"
+
+NEXTAUTH_SECRET=# your md5 hash here
+```
+
+Finally, to start application, run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br />
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## APIs used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### HxH_RPG_Environment_API Link: https://hxh-rpg-environment-api.onrender.com
 
-## Learn More
+<br />
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For this project, I used:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- React (v18.2.0);
+- Vite (v5.0.0);
+- TypeScript;
+- Styled-components;
+- Recharts;
+- React Icons;
+- React Switch;
+- Sweetalert2;
+- Axios;
